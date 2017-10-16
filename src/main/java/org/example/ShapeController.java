@@ -27,6 +27,11 @@ public class ShapeController {
         shapes.putAll(generateDefaultShapeList());
     }
 
+    @RequestMapping("/")
+    public String index() {
+        return "Greetings from Spring Boot!";
+    }
+
     @GetMapping(value = "shapes")
     public List<Shape> getShapes() {
         return new ArrayList<>(shapes.values());
