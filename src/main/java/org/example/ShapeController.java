@@ -89,7 +89,7 @@ public class ShapeController {
         }
 
         long id = shape.getId();
-        if (!shapes.containsKey(shape.getId())) {
+        if (!shapes.containsKey(id)) {
             return new ResponseEntity<>("Shape to update was not found by id: " + id, NOT_FOUND);
         }
 
